@@ -1,80 +1,180 @@
 <!DOCTYPE html>
-<html lang = "en"> 
-<link rel ="stylesheet" href ="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<html lang="en">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="logo.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <title>Document</title>
+</head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+.snip1135 {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
 
-<head>
-   <title> Nhập môn CSS </title>
-		<style>
-			header{background-color:#ffe6e6;
-            height:500px;
-			width: 100%;
-            font-weight: bold;
-            }
-            section {font-variant: small caps;
-            		 font-family: Arial;
-                     background-color:#bfff00}
-                     
-                     
-            footer {background - color: #ff4000;
-            height:50px;
-            width: 100%
-            }
-		</style>
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #e9d8f4;
+}
+
+/* Header/Blog Title */
+.header {
+<nav class="top_nav">
+            <a class="nav_logo" href="#"><img src="https://cdn2.vectorstock.com/i/1000x1000/90/81/xq-x-q-logo-initial-mark-vector-26459081.jpg" height="60px" width="60"></a>
+            <div class="nav_left">
+        <ul class="snip1135">
+  padding: 10px;
+  text-align: center;
+  background: white;
+  color: #58257b;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.header p {
+  font-size: 20px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #58257b;
+}
+
+
+/* Định dạng link điều hướng */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 40px 42px;
+  text-decoration: none;
+}
+
+/* Thay đổi màu liên kết khi di chuột qua */
+.topnav a:hover {
+  background-color: #db7093;
+  color: white;
+}
+
+/* Tạo ba cột bằng nhau, float cạnh nhau */
+.column {
+  float: left;
+  width: 33.33%;
+}
+/* Hình ảnh tượng trưng */
+.fakeimg {
+  background-color: #baa1cc;
+  width: 30%;
+  padding: 20px;
+}
+
+
+/* Thêm định dạng thẻ cho bài viết */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* Clear float khác sau các cột */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: white;
+  margin-top: 10px;
+}
+
+/* Bố cục linh hoạt: ba cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
+có chiều rộng dưới 600px */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Bố cục linh hoạt: Thanh menu điều hướng xếp chồng lên nhau thay vì cạnh nhau
+khi màn hình có chiều rộng dưới 300px  */
+@media screen and (max-width: 300px) {
+  .topnav a {
+    float: none;
+    width: 70%;
+  }
+}
+</style>
 </head>
 <body>
-	<header>
-			<nav>
-            
-	&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">Trang chủ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;<a href="thong tin.html">Thông tin</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    
-    
-	&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">Liên hệ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">Góp ý</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        	<div style ="text-align:center">
-       <section>
-	   <h1>Chào mừng bạn đến với trang web CSS của tôi</h1>
-       <div style = "text-align: center">
-       
-	   <form>
-       
-		 	<input type="text" placeholder = "Điều bạn muốn hỏi">
-            
-            
-			<button> Hãy gửi câu hỏi </button>
-            
-             <img src ="https://us.123rf.com/450wm/hstrongart/hstrongart2108/hstrongart210800071/173088294-3d-creative-summer-background-in-swimming-pool-party-theme-top-view-of-balls-swim-rings-and-fruit-sh.jpg?ver=6"alt ="">
-       
-             <h2>
-          Thông tin liên lạc của tôi
-       </h2>
-       <div style = "text-align: left">
-       <ul>
-   <li> email: thutrangnguyen121997@gmail.com </li>
-   <li> sđt : 0766715882
-     	</ul>
-        	<div class ="icons">
-          <ul>
-          
-          </ul>
-     </div>
-       </nav>
-  </header>
-  </section> 
+
+<div class="header">
+  <h1> Chào mừng bạn đến trang web truyện chữ của tôi</h1>
+  <p>Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên tục.</p>
+</div>
+<div class="topnav">
+  <a href="danhsach.html">Danh sách</a>
+  <a href="theloai.html">Thể loại</a>
+  <a href="phanloaitheochuong.html">Phân loại theo chương</a>
+  <a href="lienhe.html">Liên hệ</a>
+ 
+  </type>
   
+  <form>
+				<input type="text" placeholder=" Tìm kiếm" required>
+				<button><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                <style>
+                text-align: right;
+                </style>
+  </form>
   
-  	 </form>
-     </div>
-     </section>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Dưới 100 chương</h2>
+      <div class="fakeimg" style="height:350px"><img src ="https://static.8cache.com/cover/eJzLyTDWz3RN9DBIdvMstQg2SsrxNk4LKytLqvIMz8n2KQhwSs0ItygsDE7JNDEyCatyzLFwLvfMLzWJd8oucq7KCzd1jS8PyTbwMbLMDHcvDyuy8A7TTbctNzI01c0wNjICABslH2A=/nuoi-duong-nhan-vat-trong-sach-thanh-sieu-sao.jpg" alt = ""> </div>
+      <a href="https://truyenfull.vn/nuoi-duong-nhan-vat-trong-sach-thanh-sieu-sao/"target="active">Dưới 100 chương</a>
+    </div>
+     <div class="card">
+      <h2></h2>
+      <div class="fakeimg" style="height:350px"><img src ="https://static.8cache.com/cover/eJzLyTDWz8kqdSwJLTfJMgsu884piwwyME8NDyk0cysoj7AIzzA38vVzdPZxDMvyMzBLt_BNrUgOjsrIiPfVTTEzz6wsijLPytb1Mi-NMkk2L8v0CM3PLLctNzI01c0wNjICAA0rHzY=/shining-nikki-thiem-dieu-noan-noan.jpg" alt = ""></div>
+      <a href="https://truyenfull.vn/shining-nikki-thiem-dieu-noan-noan/"target="active">100-500 chương</a>
+    </div>
+  </div>
+  
+    <div class="card">
+      <h2>500-1000 chương</h2>
+      <div class="fakeimg" style="height:350px"><img src ="https://static.8cache.com/cover/eJwFwdEKQDAUANAvuuGO4sGDKTNlU6PxJFEWUrqFfL1zDsc8As13knNY2Hoto4FxFDlIGu-WO78Lne2WwNyr1EVpNvMJSFRF75VNJ57jq_ycevHo-WsU6C226YNBBI4h_oj6HaU=/vo-thuong-luan-hoi.jpg" alt = ""></div>
+      <a href="https://truyenfull.vn/vo-thuong-luan-hoi/"target="active">500-1000 chương</a>
+    </div>
+    </div>
+    <div class="card">
+      <h3>Phân loại theo chương</h3>
+      <div class="fakeimg"><p></p><img src ="https://static.8cache.com/cover/eJzLyTDW98x18g0vyjEzrTSMcAvODg4szk0us4g3j8jLTsr0iSj30zWLSInI8_J29TFI9YzIcTPIL7bIcs4xNnb3dQ_P9jT2LA42CHKKKvbzqUozKfG3LTcyNNXNMDYyAgC-3B4Q/vuong-phi-muon-tai-gia-roi.jpg" alt = ""></div></div></div>
      
- <footer>
-			
- </footer>
-	</body>
-</html
-© 2022 GitHub, Inc.
-Terms
-Privac
+      <p>Phân loại theo chương bao gồm: truyện chữ dưới 100 chương, 100-500 chương, 500-1000 chương, trên 1000 chương </p>
+    </div>
+<div class="footer">
+  <h4>Bản quyền năm 2022</h4>
+</div>
+
+</body>
+</html>
