@@ -1,0 +1,31 @@
+!DOCTYPE html>
+    <html>
+           <head>
+                      <style>
+		#noidung{background: pink; height:300px; width:100%;color:white; font-size:30px;}
+		button{background:red;}
+	</style>
+           </head>
+           <body>
+            <h1>Bài tập JavaScript</h1>
+            <p id="noidung"></p>
+            <button type="button" onclick="hienthi()">Hien thi </button>            
+           <button type="button" onclick="tinhtong()">Tinh tong</button>            
+          <button type="button" onclick="tinhtongchan()">Tinh tong chan</button>  
+            <script>
+              function hienthi() {
+	// Giới thiệu tên
+                document.getElementById("noidung").innerHTML = "Xin chào mọi người . Tôi tên là Trang";
+              }
+             function tinhtong() {
+                  //Tính tổng từ 1 -> 10
+	document.getElementById("noidung").innerHTML = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 +10;
+              }
+            function tinhtongchan() {
+                  //Tính tổng các số chẳn từ 1 -> 10
+	document.getElementById("noidung").innerHTML =2 + 4 + 6 + 8 +10 ;
+              }
+            </script>    
+         </body>
+    </html>
+      
