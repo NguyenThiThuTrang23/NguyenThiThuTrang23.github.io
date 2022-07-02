@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<body>
+
+                    <div class="col-lg-4 col-12 mb-5">
+                        <h2 class="tm-text-primary mb-5">Đăng ký</h2>
+                        <div class="input-box">
+                            <form id="myForm" action="">
+                 <p>Tên: <input id="textbox1" name="textname" type="text" /></p>
+                 <p>Email: <input id="textbox2" name="textemail" type="text" /></p>
+               </form>
+               <div class="container">
+                <div class="col-6">
+                    <p>Giới tính</p>
+                        <input name ="gender" type = "radio" value = "Nam" />Nam
+                        <input name ="gender" type = "radio" value = "Nữ" />Nữ
+                    </select>
+                </div>
+                            <div class="form-group">
+                                <select class="form-control" id="contact-select" name="inquiry">
+                                    <option value="-">Quốc tịch</option>
+                                    <option value="Việt Nam">Việt Nam</option>
+                                    <option value="Nhật Bản">Nhật Bản</option>
+                                    <option value="Trung Quốc">Trung Quốc</option>
+                                    <option value="Hàn Quốc">Hàn Quốc </option>
+                                </select>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="input-box">
+                            <span>Sở thích</span>
+                            <br>
+                            <div class="margin_b"></div>
+                            <input type="checkbox" id="laptrinh"> 
+                            <label for="laptrinh">Lập trình</label>
+                            <div class="margin_b"></div>
+                            <input type="checkbox" id="du lịch"> 
+                            <label for="dulich">Du lịch</label>
+                            <div class="margin_b"></div>
+                            <input type="checkbox" id="xemphim"> 
+                            <label for="xemphim">Xem phim</label>
+                            <div class="margin_b"></div>
+                            <input type="checkbox" id="nghenhac"> 
+                            <label for="nghenhac">Nghe nhạc</label>
+                            <div class="margin_b"></div>
+                            <input type="checkbox" id="doctruyen"> 
+                            <label for="doctruyen">Đọc truyện</label>
+                        </div>
+                        <p id="noidung"></p>
+            <button type="button" onclick="chapnhan()">Chấp nhận </button>            
+            <button type="button" onclick="huy()">Hủy</button>            
+            <script>
+                            </button>
+                        </div>
+                    </form>               
+                    </div>
+                </footer>
+                <style>
+    
+                <script src="js/plugins.js"></script>
+                <script>
+                    function chapnhan() {
+	//Tên
+                document.getElementById("noidung").innerHTML = "Tên " + document.forms["myForm"].textname.value;
+              }
+             function chapnhan() {
+    //Email
+	document.getElementById("noidung").innerHTML ="Email " +  document.forms["myForm"].textemail.value ";
+              }
+              function huy() {
+    //Hủy
+	document.getElementById("noidung").innerHTML =  ;
+                
+            </script>    
+                </script>
+            </body>
+            </html>
