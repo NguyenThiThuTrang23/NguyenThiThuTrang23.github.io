@@ -1,85 +1,260 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/templatemo-style.css">
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Courier New", Courier, monospace;
+        background-color: rgb(255, 80, 223);
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+      .container {
+        display: flex;
+        width: 60rem;
+        border-radius: 30px;
+        margin: auto;
+        background:#c49ddf;
+      }
+      .input-data {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 2em;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        width: 10.8rem;
+        padding: 0.9em 0;
+      }
+      form > *,
+      content > * {
+        padding-bottom: 1em;
+      }
+      .flex {
+        display: flex;
+      }
+      .gender > * {
+        padding-left: 2em;
+      }
+      .hobby {
+        flex-direction: column;
+      }
+      .hobby > * {
+        padding-left: 2em;
+        padding-bottom: 0.5em;
+      }
+      .button {
+        padding: 0;
+      }
+      .output-data {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: #d6f3f7;
+        border-radius: 0px 30px 30px 0px;
+      }
+      .content > * {
+        padding-left: 2em;
+        padding-bottom: 1em;
+        padding: 35px;
+      }
+      .input-container {
+        position: relative;
+        margin-bottom: 25px;
+      }
+      input[type="text"],
+      select {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 6px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+      }
 
-                    <div class="col-lg-4 col-12 mb-5">
-                        <h2 class="tm-text-primary mb-5">Đăng ký</h2>
-                        <div class="input-box">
-                            <form id="myForm" action="">
-                 <p>Tên: <input id="textbox1" name="textname" type="text" /></p>
-                 <p>Email: <input id="textbox2" name="textemail" type="text" /></p>
-               </form>
-               <div class="container">
-                <div class="col-6">
-                    <p>Giới tính</p>
-                        <input name ="gender" type = "radio" value = "Nam" />Nam
-                        <input name ="gender" type = "radio" value = "Nữ" />Nữ
-                    </select>
-                </div>
-                            <div class="form-group">
-                                <select class="form-control" id="contact-select" name="inquiry">
-                                    <option value="-">Quốc tịch</option>
-                                    <option value="Việt Nam">Việt Nam</option>
-                                    <option value="Nhật Bản">Nhật Bản</option>
-                                    <option value="Trung Quốc">Trung Quốc</option>
-                                    <option value="Hàn Quốc">Hàn Quốc </option>
-                                </select>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="input-box">
-                            <span>Sở thích</span>
-                            <br>
-                            <div class="margin_b"></div>
-                            <input type="checkbox" id="laptrinh"> 
-                            <label for="laptrinh">Lập trình</label>
-                            <div class="margin_b"></div>
-                            <input type="checkbox" id="du lịch"> 
-                            <label for="dulich">Du lịch</label>
-                            <div class="margin_b"></div>
-                            <input type="checkbox" id="xemphim"> 
-                            <label for="xemphim">Xem phim</label>
-                            <div class="margin_b"></div>
-                            <input type="checkbox" id="nghenhac"> 
-                            <label for="nghenhac">Nghe nhạc</label>
-                            <div class="margin_b"></div>
-                            <input type="checkbox" id="doctruyen"> 
-                            <label for="doctruyen">Đọc truyện</label>
-                        </div>
-                        <p id="noidung"></p>
-            <button type="button" onclick="chapnhan()">Chấp nhận </button>            
-            <button type="button" onclick="huy()">Hủy</button>            
-            <script>
-                            </button>
-                        </div>
-                    </form>               
-                    </div>
-                </footer>
-                <style>
-    
-                <script src="js/plugins.js"></script>
-                <script>
-                    function chapnhan() {
-	//Tên
-                document.getElementById("noidung").innerHTML = "Tên " + document.forms["myForm"].textname.value;
-              }
-             function chapnhan() {
-    //Email
-	document.getElementById("noidung").innerHTML ="Email " +  document.forms["myForm"].textemail.value ";
-              }
-              function huy() {
-    //Hủy
-	document.getElementById("noidung").innerHTML =  ;
-                
-            </script>    
-                </script>
-            </body>
-            </html>
+      input[type="submit"] {
+        width: 50%;
+        background-color:#4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #ff0000;
+      }
+
+      input[type="reset"] {
+        background-color: #ff0000;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      input[type="reset"]:hover {
+        background-color:  #ff271057;
+      }
+
+      @media (max-width: 60rem) {
+        .container {
+          flex-direction: column;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: auto;
+        }
+        .output-data {
+          height: auto;
+        }
+        section {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="input-data">
+          <form id="user-detail">
+            <div class="input-container">
+              <label for="name">Tên của bạn : </label>
+              <input
+                type="text"
+                id="user-name"
+                placeholder="Nhập tên của bạn..."
+              />
+            </div>
+            <div class="input-container">
+              <label for="name">Email của bạn: </label>
+              <input
+                type="text"
+                id="user-email"
+                placeholder="Nhập Email của bạn..."
+              />
+            </div>
+
+            <label for="gender">Giới Tính : </label>
+            <div class="flex gender">
+              <div class="male">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Nam"
+                  id="user-gender"
+                />
+                <label for="male">Nam</label>
+              </div>
+              <div class="female">
+                <input type="radio" name="gender" value="Nữ" id="user-gender" />
+                <label for="female">Nữ</label>
+              </div>
+            </div>
+
+            <div class="nation">
+                <label for="nation">Quốc Tịch:</label>
+                <select name="nationality" id="user-nation">
+                  <option>Việt Nam</option>
+                  <option>Trung Quốc</option>
+                  <option>Nhật Bản</option>
+                  <option>Hàn Quốc</option>
+                </select>
+              </div>
+
+            <label for="hobby">Sở Thích : </label>
+            <div class="flex hobby">
+              <div class="coding">
+                <input type="checkbox" name="hobby" value="Lập Trình" />
+                <label for="coding">Lập Trình</label>
+              </div>
+              <div class="travel">
+                <input type="checkbox" name="hobby" value="Du Lịch" />
+                <label for="travel">Du Lịch</label>
+              </div>
+            </div>
+
+            <div class="button">
+              <input type="submit" value="Chấp Nhận" id="submit" />
+              <input type="reset" value="Hủy" id="reset" />
+            </div>
+          </form>
+        </div>
+
+        <div class="output-data">
+          <div class="content">
+            <p class="content-name">Tên của bạn :</p>
+            <p class="content-email">Email của bạn:</p>
+            <p class="content-gender">Giới Tính :</p>
+            <p class="content-nation">Quốc Tịch :</p>
+            <p class="content-hobby">Sở Thích :</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const contentOutput = {
+      ".content-name": "id",
+      ".content-email": "id",
+      ".content-gender": "name",
+      ".content-nation": "id",
+      ".content-hobby": "name",
+    };
+
+    const idValues = {
+      "user-name": "Tên của bạn",
+      "user-email": "Email của bạn",
+      gender: "Giới Tính",
+      "user-nation": "Quốc Tịch",
+      hobby: "Sở Thích",
+    };
+
+    document.getElementById("submit").addEventListener("click", (e) => {
+      e.preventDefault();
+      const ouputs = Object.keys(contentOutput);
+      ouputs.forEach((e, i) => {
+        const id = Object.keys(idValues)[i];
+        const getType = contentOutput[e];
+        let value;
+        if (getType === "id") value = document.getElementById(id).value;
+        else if (getType === "name") {
+          let passed = [];
+          document.getElementsByName(id).forEach((e) => {
+            if (e.checked) passed.push(e.value);
+          });
+          value = passed.join(", ");
+        }
+        document.querySelector(e).textContent = `${idValues[id]} : ${
+          value.length ? `${value}` : ""
+        }`;
+      });
+    });
+
+    document.getElementById("reset").addEventListener("click", (e) => {
+      const ouputs = Object.keys(contentOutput);
+      const samples = Object.values(idValues)
+
+      ouputs.forEach((e,i) => {
+        document.querySelector(e).textContent = `${samples[i]} :`;
+      });
+    });
+  </script>
+</html>
