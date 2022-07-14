@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Courier New", Courier, monospace;
+        background-color: rgb(255, 80, 223);
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+      .container {
+        display: flex;
+        width: 60rem;
+        border-radius: 30px;
+        margin: auto;
+        background:#dd9ddf;
+      }
+      .input-data {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 2em;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        width: 10.8rem;
+        padding: 0.9em 0;
+      }
+      form > *,
+      content > * {
+        padding-bottom: 1em;
+      }
+      .flex {
+        display: flex;
+      }
+      .gender > * {
+        padding-left: 2em;
+      }
+      .hobby {
+        flex-direction: column;
+      }
+      .hobby > * {
+        padding-left: 2em;
+        padding-bottom: 0.5em;
+      }
+      .button {
+        padding: 0;
+      }
+      .output-data {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: #d6f3f7;
+        border-radius: 0px 30px 30px 0px;
+      }
+      .content > * {
+        padding-left: 2em;
+        padding-bottom: 1em;
+        padding: 35px;
+      }
+      .input-container {
+        position: relative;
+        margin-bottom: 25px;
+      }
+      input[type="text"],
+      select {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 6px;
+        display: inline-block;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 20px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 50%;
+        background-color:#4caf99;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #66ff00;
+      }
+
+      input[type="reset"] {
+        background-color: #ffd900;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      input[type="reset"]:hover {
+        background-color:  #10cfff57;
+      }
+
+      @media (max-width: 60rem) {
+        .container {
+          flex-direction: column;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: auto;
+        }
+        .output-data {
+          height: auto;
+        }
+        section {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="input-data">
+          <form id="user-detail">
+            <div class="input-container">
+              <label for="name">Số thứ nhất: </label>
+              <input
+                type="text"
+                id="user-name"
+                placeholder="Nhập số..."
+              />
+            </div>
+            <div class="input-container">
+              <label for="name">Số thứ hai: </label>
+              <input
+                type="text"
+                id="user-name"
+                placeholder="Nhập số..."
+              />
+            </div>
+            
+            <div class="flex gender">
+              <div class="male">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="+"
+                  id="user-gender"
+                />
+                <label for="male">+</label>
+              </div>
+            <div class="female">
+                <input type="radio" name="gender" value="-" id="user-gender" />
+                <label for="male">-</label>
+              </div>
+              
+              <div class="female">
+                <input type="radio" name="gender" value="*" id="user-gender" />
+                <label for="female">*</label>
+              </div>
+              <div class="female">
+                <input type="radio" name="gender" value="/" id="user-gender" />
+                <label for="female">/</label>
+              </div>
+            </div>
+            </div>
+
+            <div class="button">
+              <input type="submit" value="Kết quả" id="submit" />
+              <input type="reset" value="Hủy" id="reset" />
+            </div>
+          </form>
+        </div>
+
+        <div class="output-data">
+          <div class="content">
+            <p class="content-name">Số thứ nhất:</p>
+            <p class="content-email">Số thứ hai:</p>
+          </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const contentOutput = {
+      ".content-name":"id",
+      ".content-name": "id",
+      ".content-gender": "name",
+    };
+
+    const idValues = {
+      "user-name": "Số thứ nhất",
+      "user-name": "Số thứ hai",
+      gender: "",
+    };
+   
+    document.getElementById("submit").addEventListener("click", (e) => {
+      e.preventDefault();
+      const ouputs = Object.keys(contentOutput);
+      ouputs.forEach((e, i) => {
+        const id = Object.keys(idValues)[i];
+        const getType = contentOutput[e];
+        let value;
+        if (getType === "id") value = document.getElementById(id).value;
+        else if (getType === "name") {
+          let passed = [];
+          document.getElementsByName(id).forEach((e) => {
+            if (e.checked) passed.push(e.value);
+          });
+          value = passed.join(", ");
+        }
+        document.querySelector(e).textContent = `${idValues[id]} : ${
+          value.length ? `${value}` : ""
+        }`;
+      });
+    });
+
+    document.getElementById("reset").addEventListener("click", (e) => {
+      const ouputs = Object.keys(contentOutput);
+      const samples = Object.values(idValues)
+
+      ouputs.forEach((e,i) => {
+        document.querySelector(e).textContent = `${samples[i]} :`;
+      });
+    });
+  </script>
+</html>
